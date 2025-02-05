@@ -35,29 +35,45 @@ class Main
 
     }
 }
-//2nd solution
-class Main
+class Main 
 {
     public static void main(String [] args)
     {
-
+        
         int n=5;
+        int temp=n;
         int c=n;
+        n=n-1;
         for(int i=0; i<n; i++)
         {
-            for(int j=0; j<i; j++)
+            for(int j=0; j<n-i; j++)
             {
                 System.out.print(" ");
             }
-
-
-            for(int j=0; j<((2*c)-1); j++)
+            
+            for(int j=0; j<(2*i)+1; j++)
+            {
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+        n=temp;
+        for(int k=0; k<n; k++)
+        {
+            for(int k1=0; k1<k; k1++)
+            {
+                System.out.print(" ");
+            }
+            
+            
+            for(int k2=0; k2<((2*c)-1); k2++)
             {
                 System.out.print("*");
             }
             c--;
             System.out.println();
         }
-
+        
     }
 }
